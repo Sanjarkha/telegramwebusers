@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Авторизация</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" th:href="@{login/images/icons/fav.png}" href="../static/login/images/icons/fav.png"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/vendor/bootstrap/css/bootstrap.min.css}"href="../static/login/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/fonts/font-awesome-4.7.0/css/font-awesome.min.css}" href="../static/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/fonts/iconic/css/material-design-iconic-font.min.css}" href="../static/login/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/vendor/animate/animate.css}" href="../static/login/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/vendor/css-hamburgers/hamburgers.min.css} " href="../static/login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/vendor/animsition/css/animsition.min.css}" href="../static/login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/vendor/select2/select2.min.css}" href="../static/login/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/vendor/daterangepicker/daterangepicker.css}" href="../static/login/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{login/css/util.css}" href="../static/login/css/util.css">
+    <link rel="stylesheet" type="text/css" th:href="@{login/css/main.css}" href="../static/login/css/main.css">
+</head>
+<body>
+<!-- Problem  bacground img  32-->
+<div class="container-login100" style="background-image: url('../static/login/images/bg-login.jpg');"   >
+    <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+
+        <form th:action="@{/login}" th:object="${loginForm}" method="post"  class="login100-form validate-form">
+
+            <div class="login100-form-title p-b-37">
+                <img th:src="@{login/images/davrbank.png}"  src="../static/login/images/davrbank.png" width="100%" height="100%">
+            </div>
+            <div class="wrap-input100 validate-input m-b-25" data-validate="Введите Логин">
+                <input type="text" id="username" name="username" autofocus="autofocus" class="input100"   placeholder="Логин"  >
+                <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input m-b-25" data-validate = "Введите Пароль">
+                <input type="password" id="password" name="password" class="input100"  placeholder="Пароль"  />
+                <span class="focus-input100"></span>
+            </div>
+            <div class="container-login100-form-btn" >
+                <button class="login100-form-btn">
+                    Войти
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!--<div class="container-login100" style="background-image: url('../static/login/images/bg-login.jpg');">-->
+<!--   <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">-->
+
+
+<!--         <form class="login100-form validate-form" th:action="@{/login}" th:object="${loginForm}" method="post">-->
+
+<!--            <div class="login100-form-title p-b-37">-->
+<!--               <img src="../static/login/images/davrbank.png" width="100%" height="100%">-->
+<!--            </div>-->
+
+
+<!--            <div class="wrap-input100 validate-input m-b-25" data-validate="Введите Логин">-->
+<!--               <input class="input100" type="text" name="username" placeholder="Логин"  id="username" >-->
+<!--               <span class="focus-input100"></span>-->
+<!--            </div>-->
+
+<!--            <div class="wrap-input100 validate-input m-b-25" data-validate = "Введите Пароль">-->
+<!--               <input class="input100" type="password" name="pass" placeholder="Пароль" id="password">-->
+<!--               <span class="focus-input100"></span>-->
+<!--            </div>-->
+<!--            <input type="submit" value="OOK">&ndash;&gt;-->
+<!--            <div class="container-login100-form-btn">-->
+<!--               <button class="login100-form-btn">-->
+<!--                  Войти-->
+<!--               </button>-->
+<!--            </div>-->
+
+
+
+<!--         </form>-->
+<!--      -->
+
+
+<!--   </div>-->
+<!--</div>-->
+
+
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script th:src="@{login/vendor/jquery/jquery-3.2.1.min.js}" src="../static/login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script th:src="@{login/vendor/animsition/js/animsition.min.js}" src="../static/login/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script th:src="@{login/vendor/bootstrap/js/popper.js}" src="../static/login/vendor/bootstrap/js/popper.js"></script>
+<script th:src="@{login/vendor/bootstrap/js/bootstrap.min.js}" src="../static/login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script th:src="@{login/vendor/select2/select2.min.js}" src="../static/login/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script th:src="@{login/vendor/daterangepicker/moment.min.js}" src="../static/login/vendor/daterangepicker/moment.min.js"></script>
+<script th:src="@{login/vendor/daterangepicker/daterangepicker.js}" src="../static/login/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script th:src="@{login/vendor/countdowntime/countdowntime.js}" src="../static/login/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script th:src="@{login/js/main.js}" src="../static/login/js/main.js"></script>
+</body>
+
+</html>
